@@ -1,6 +1,6 @@
 /*
  * SF6 Hitbox REV.B - Pico 2 (RP2350)
- * pin map for the actual board (R3 / HK swapped vs. the design)
+ * pin map measured from the actual board
  */
 
 #ifndef PICO_BOARD_CONFIG_H_
@@ -14,24 +14,20 @@
 #define GPIO_PIN_28 GpioAction::BUTTON_PRESS_UP
 #define GPIO_PIN_27 GpioAction::BUTTON_PRESS_DOWN
 #define GPIO_PIN_05 GpioAction::BUTTON_PRESS_LEFT
-#define GPIO_PIN_04 GpioAction::BUTTON_PRESS_RIGHT
+#define GPIO_PIN_06 GpioAction::BUTTON_PRESS_B3      // LP
+#define GPIO_PIN_18 GpioAction::BUTTON_PRESS_B4      // MP
+#define GPIO_PIN_10 GpioAction::BUTTON_PRESS_R1      // HP
+#define GPIO_PIN_11 GpioAction::BUTTON_PRESS_B1      // LK
+#define GPIO_PIN_13 GpioAction::BUTTON_PRESS_B2      // MK
+#define GPIO_PIN_08 GpioAction::BUTTON_PRESS_L1      // 3P
+#define GPIO_PIN_09 GpioAction::BUTTON_PRESS_L2      // 3K
+#define GPIO_PIN_26 GpioAction::BUTTON_PRESS_L3      // L3
+#define GPIO_PIN_04 GpioAction::BUTTON_PRESS_R3      // R3
+#define GPIO_PIN_07 GpioAction::BUTTON_PRESS_S2      // START
+#define GPIO_PIN_01 GpioAction::BUTTON_PRESS_R2      // HK
 
-#define GPIO_PIN_06 GpioAction::BUTTON_PRESS_B3
-#define GPIO_PIN_18 GpioAction::BUTTON_PRESS_B4
-#define GPIO_PIN_10 GpioAction::BUTTON_PRESS_R1
-
-#define GPIO_PIN_11 GpioAction::BUTTON_PRESS_B1
-#define GPIO_PIN_13 GpioAction::BUTTON_PRESS_B2
-
-#define GPIO_PIN_08 GpioAction::BUTTON_PRESS_L1
-#define GPIO_PIN_09 GpioAction::BUTTON_PRESS_L2
-
-#define GPIO_PIN_12 GpioAction::BUTTON_PRESS_R3
-#define GPIO_PIN_07 GpioAction::BUTTON_PRESS_R2
-#define GPIO_PIN_26 GpioAction::BUTTON_PRESS_L3
-
-#define GPIO_PIN_01 GpioAction::BUTTON_PRESS_S2
-#define GPIO_PIN_02 GpioAction::BUTTON_PRESS_S1
+#define GPIO_PIN_12 GpioAction::BUTTON_PRESS_RIGHT   // RIGHT
+#define GPIO_PIN_02 GpioAction::BUTTON_PRESS_S1      // SELECT
 
 #define GPIO_PIN_16 GpioAction::BUTTON_PRESS_A1
 #define GPIO_PIN_17 GpioAction::BUTTON_PRESS_A2
