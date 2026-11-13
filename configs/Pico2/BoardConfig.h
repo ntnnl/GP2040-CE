@@ -1,6 +1,6 @@
 /*
  * SF6 Hitbox REV.B - Pico 2 (RP2350)
- * design map with R3 / HK swapped on this board
+ * pin map for the actual board (R3 / HK swapped vs. the design)
  */
 
 #ifndef PICO_BOARD_CONFIG_H_
