@@ -1,6 +1,6 @@
 /*
  * SF6 Hitbox REV.B - Pico 2 (RP2350)
- * 14 confirmed keys; HK and SELECT left unmapped for now
+ * design map with R3 / HK swapped on this board
  */
 
 #ifndef PICO_BOARD_CONFIG_H_
@@ -14,7 +14,7 @@
 #define GPIO_PIN_28 GpioAction::BUTTON_PRESS_UP
 #define GPIO_PIN_27 GpioAction::BUTTON_PRESS_DOWN
 #define GPIO_PIN_05 GpioAction::BUTTON_PRESS_LEFT
-#define GPIO_PIN_01 GpioAction::BUTTON_PRESS_RIGHT
+#define GPIO_PIN_04 GpioAction::BUTTON_PRESS_RIGHT
 
 #define GPIO_PIN_06 GpioAction::BUTTON_PRESS_B3
 #define GPIO_PIN_18 GpioAction::BUTTON_PRESS_B4
@@ -26,9 +26,12 @@
 #define GPIO_PIN_08 GpioAction::BUTTON_PRESS_L1
 #define GPIO_PIN_09 GpioAction::BUTTON_PRESS_L2
 
-#define GPIO_PIN_04 GpioAction::BUTTON_PRESS_R3
-#define GPIO_PIN_02 GpioAction::BUTTON_PRESS_L3
-#define GPIO_PIN_12 GpioAction::BUTTON_PRESS_S2
+#define GPIO_PIN_12 GpioAction::BUTTON_PRESS_R3
+#define GPIO_PIN_07 GpioAction::BUTTON_PRESS_R2
+#define GPIO_PIN_26 GpioAction::BUTTON_PRESS_L3
+
+#define GPIO_PIN_01 GpioAction::BUTTON_PRESS_S2
+#define GPIO_PIN_02 GpioAction::BUTTON_PRESS_S1
 
 #define GPIO_PIN_16 GpioAction::BUTTON_PRESS_A1
 #define GPIO_PIN_17 GpioAction::BUTTON_PRESS_A2
