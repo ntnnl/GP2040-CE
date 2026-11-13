@@ -1,6 +1,6 @@
 /*
  * SF6 Hitbox REV.B - Pico 2 (RP2350)
- * 14 confirmed keys only; HK and SELECT are left unmapped for now
+ * 14 confirmed keys; HK and SELECT left unmapped for now
  */
 
 #ifndef PICO_BOARD_CONFIG_H_
@@ -60,10 +60,26 @@
 #define LED_FORMAT LED_FORMAT_GRB
 
 #define LIGHT_DATA_NAME_DEFAULT "Standard"
-#define LIGHT_DATA_SIZE_DEFAULT 0
-#define LIGHT_DATA_DEFAULT 0
+#define LIGHT_DATA_SIZE_DEFAULT 12
+#define LIGHT_DATA_DEFAULT \
+0,  1, 2,  3, 5,  LightType::LightType_ActionButton, LightInputSource::LightInputSource_GPIO, \
+1,  1, 4,  3, 3,  LightType::LightType_ActionButton, LightInputSource::LightInputSource_GPIO, \
+2,  1, 6,  4, 4,  LightType::LightType_ActionButton, LightInputSource::LightInputSource_GPIO, \
+3,  1, 7,  7, 2,  LightType::LightType_ActionButton, LightInputSource::LightInputSource_GPIO, \
+4,  1, 8,  3, 10, LightType::LightType_ActionButton, LightInputSource::LightInputSource_GPIO, \
+5,  1, 10, 2, 11, LightType::LightType_ActionButton, LightInputSource::LightInputSource_GPIO, \
+6,  1, 12, 2, 12, LightType::LightType_ActionButton, LightInputSource::LightInputSource_GPIO, \
+7,  1, 14, 2, 13, LightType::LightType_ActionButton, LightInputSource::LightInputSource_GPIO, \
+8,  1, 8,  5, 6,  LightType::LightType_ActionButton, LightInputSource::LightInputSource_GPIO, \
+9,  1, 10, 4, 7,  LightType::LightType_ActionButton, LightInputSource::LightInputSource_GPIO, \
+10, 1, 12, 4, 8,  LightType::LightType_ActionButton, LightInputSource::LightInputSource_GPIO, \
+11, 1, 14, 4, 9,  LightType::LightType_ActionButton, LightInputSource::LightInputSource_GPIO
 
-#define LEDS_PROFILE0_ENABLED 0
+#define LEDS_PROFILE0_ENABLED 1
+#define LEDS_PROFILE0_BASE_ANIMATION_INDEX AnimationNonPressedEffects::AnimationNonPressedEffects_EFFECT_RAINBOW_ROTATE
+#define LEDS_PROFILE0_PRESSED_ANIMATION_INDEX AnimationPressedEffects::AnimationPressedEffects_PRESSEDEFFECT_STATIC_COLOR
+#define LEDS_PROFILE0_STATIC_COLOR_PRESSED ColorIndexWhite
+
 #define HAS_I2C_DISPLAY 0
 #define I2C0_ENABLED 0
 
