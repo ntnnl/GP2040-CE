@@ -6,30 +6,38 @@
 
 #define BOARD_CONFIG_LABEL "Pico2"
 
-#define GPIO_PIN_28 GpioAction::BUTTON_PRESS_UP      // pin 34
-#define GPIO_PIN_27 GpioAction::BUTTON_PRESS_DOWN    // pin 32
-#define GPIO_PIN_05 GpioAction::BUTTON_PRESS_LEFT    // pin 7
-#define GPIO_PIN_07 GpioAction::BUTTON_PRESS_RIGHT   // pin 10
+// direction
+#define GPIO_PIN_28 GpioAction::BUTTON_PRESS_UP
+#define GPIO_PIN_27 GpioAction::BUTTON_PRESS_DOWN
+#define GPIO_PIN_05 GpioAction::BUTTON_PRESS_LEFT
+#define GPIO_PIN_07 GpioAction::BUTTON_PRESS_RIGHT
 
-#define GPIO_PIN_06 GpioAction::BUTTON_PRESS_B3      // LP  pin 9
-#define GPIO_PIN_18 GpioAction::BUTTON_PRESS_B4      // MP  pin 24
-#define GPIO_PIN_10 GpioAction::BUTTON_PRESS_R1      // HP  pin 14
+// LP / MP -> Drive Impact (both send L2)
+#define GPIO_PIN_06 GpioAction::BUTTON_PRESS_L2
+#define GPIO_PIN_18 GpioAction::BUTTON_PRESS_L2
+// HP -> Drive Parry (L1)
+#define GPIO_PIN_10 GpioAction::BUTTON_PRESS_L1
 
-#define GPIO_PIN_11 GpioAction::BUTTON_PRESS_B1      // LK  pin 15
-#define GPIO_PIN_13 GpioAction::BUTTON_PRESS_B2      // MK  pin 17
+// LK -> light punch (B3), HK -> medium punch (B4)
+#define GPIO_PIN_11 GpioAction::BUTTON_PRESS_B3
+#define GPIO_PIN_12 GpioAction::BUTTON_PRESS_B4
+// 3K -> heavy punch (R1)
+#define GPIO_PIN_09 GpioAction::BUTTON_PRESS_R1
 
-#define GPIO_PIN_08 GpioAction::BUTTON_PRESS_L1      // 3P  pin 11
-#define GPIO_PIN_09 GpioAction::BUTTON_PRESS_L2      // 3K  pin 12
+// MK -> light kick (B1), 3P -> medium kick (B2)
+#define GPIO_PIN_13 GpioAction::BUTTON_PRESS_B1
+#define GPIO_PIN_08 GpioAction::BUTTON_PRESS_B2
+// R3 -> heavy kick (R2)
+#define GPIO_PIN_04 GpioAction::BUTTON_PRESS_R2
 
-#define GPIO_PIN_04 GpioAction::BUTTON_PRESS_R3      // R3  pin 6
-#define GPIO_PIN_12 GpioAction::BUTTON_PRESS_R2      // HK  pin 16
-#define GPIO_PIN_26 GpioAction::BUTTON_PRESS_L3      // L3  pin 31
+// L3 straight press, start / select
+#define GPIO_PIN_26 GpioAction::BUTTON_PRESS_L3
+#define GPIO_PIN_01 GpioAction::BUTTON_PRESS_S2
+#define GPIO_PIN_02 GpioAction::BUTTON_PRESS_S1
 
-#define GPIO_PIN_01 GpioAction::BUTTON_PRESS_S2      // START   pin 2
-#define GPIO_PIN_02 GpioAction::BUTTON_PRESS_S1      // SELECT  pin 4
-
-#define GPIO_PIN_16 GpioAction::BUTTON_PRESS_A1      // EXT1  pin 21
-#define GPIO_PIN_17 GpioAction::BUTTON_PRESS_A2      // EXT2  pin 22
+// extension pads
+#define GPIO_PIN_16 GpioAction::BUTTON_PRESS_A1
+#define GPIO_PIN_17 GpioAction::BUTTON_PRESS_A2
 
 #define KEY_DPAD_UP     HID_KEY_ARROW_UP
 #define KEY_DPAD_DOWN   HID_KEY_ARROW_DOWN
@@ -52,6 +60,7 @@
 #define KEY_BUTTON_FN   -1
 
 #define TURBO_ENABLED 0
+#define LEDS_PROFILE0_ENABLED 0
 
 #define BOARD_LEDS_PIN 25
 #define LED_BRIGHTNESS_MAXIMUM 100
@@ -72,11 +81,6 @@
 9,  1, 10, 4, 7,  LightType::LightType_ActionButton, LightInputSource::LightInputSource_GPIO, \
 10, 1, 12, 4, 8,  LightType::LightType_ActionButton, LightInputSource::LightInputSource_GPIO, \
 11, 1, 14, 4, 9,  LightType::LightType_ActionButton, LightInputSource::LightInputSource_GPIO
-
-#define LEDS_PROFILE0_ENABLED 1
-#define LEDS_PROFILE0_BASE_ANIMATION_INDEX AnimationNonPressedEffects::AnimationNonPressedEffects_EFFECT_RAINBOW_ROTATE
-#define LEDS_PROFILE0_PRESSED_ANIMATION_INDEX AnimationPressedEffects::AnimationPressedEffects_PRESSEDEFFECT_STATIC_COLOR
-#define LEDS_PROFILE0_STATIC_COLOR_PRESSED ColorIndexWhite
 
 #define HAS_I2C_DISPLAY 0
 #define I2C0_ENABLED 0
