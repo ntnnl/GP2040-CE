@@ -1,7 +1,3 @@
-/*
- * PROBE BUILD - every key types a letter
- */
-
 #ifndef PICO_BOARD_CONFIG_H_
 #define PICO_BOARD_CONFIG_H_
 
@@ -10,47 +6,53 @@
 
 #define BOARD_CONFIG_LABEL "Pico2"
 
-#define GPIO_PIN_01 GpioAction::BUTTON_PRESS_UP
-#define GPIO_PIN_02 GpioAction::BUTTON_PRESS_DOWN
-#define GPIO_PIN_04 GpioAction::BUTTON_PRESS_LEFT
-#define GPIO_PIN_05 GpioAction::BUTTON_PRESS_RIGHT
-#define GPIO_PIN_06 GpioAction::BUTTON_PRESS_B1
-#define GPIO_PIN_07 GpioAction::BUTTON_PRESS_B2
-#define GPIO_PIN_08 GpioAction::BUTTON_PRESS_B3
-#define GPIO_PIN_09 GpioAction::BUTTON_PRESS_B4
-#define GPIO_PIN_10 GpioAction::BUTTON_PRESS_L1
-#define GPIO_PIN_11 GpioAction::BUTTON_PRESS_L2
-#define GPIO_PIN_12 GpioAction::BUTTON_PRESS_R1
-#define GPIO_PIN_13 GpioAction::BUTTON_PRESS_R2
-#define GPIO_PIN_18 GpioAction::BUTTON_PRESS_S1
-#define GPIO_PIN_26 GpioAction::BUTTON_PRESS_S2
-#define GPIO_PIN_27 GpioAction::BUTTON_PRESS_L3
-#define GPIO_PIN_28 GpioAction::BUTTON_PRESS_R3
+#define GPIO_PIN_28 GpioAction::BUTTON_PRESS_UP      // pin 34
+#define GPIO_PIN_27 GpioAction::BUTTON_PRESS_DOWN    // pin 32
+#define GPIO_PIN_05 GpioAction::BUTTON_PRESS_LEFT    // pin 7
+#define GPIO_PIN_07 GpioAction::BUTTON_PRESS_RIGHT   // pin 10
 
-#define KEY_DPAD_UP     HID_KEY_A
-#define KEY_DPAD_DOWN   HID_KEY_B
-#define KEY_DPAD_LEFT   HID_KEY_C
-#define KEY_DPAD_RIGHT  HID_KEY_D
-#define KEY_BUTTON_B1   HID_KEY_E
-#define KEY_BUTTON_B2   HID_KEY_F
-#define KEY_BUTTON_B3   HID_KEY_G
-#define KEY_BUTTON_B4   HID_KEY_H
-#define KEY_BUTTON_L1   HID_KEY_I
-#define KEY_BUTTON_L2   HID_KEY_J
-#define KEY_BUTTON_R1   HID_KEY_K
-#define KEY_BUTTON_R2   HID_KEY_L
-#define KEY_BUTTON_S1   HID_KEY_M
-#define KEY_BUTTON_S2   HID_KEY_N
-#define KEY_BUTTON_L3   HID_KEY_O
-#define KEY_BUTTON_R3   HID_KEY_P
-#define KEY_BUTTON_A1   HID_KEY_Q
-#define KEY_BUTTON_A2   HID_KEY_R
+#define GPIO_PIN_06 GpioAction::BUTTON_PRESS_B3      // LP  pin 9
+#define GPIO_PIN_18 GpioAction::BUTTON_PRESS_B4      // MP  pin 24
+#define GPIO_PIN_10 GpioAction::BUTTON_PRESS_R1      // HP  pin 14
+
+#define GPIO_PIN_11 GpioAction::BUTTON_PRESS_B1      // LK  pin 15
+#define GPIO_PIN_13 GpioAction::BUTTON_PRESS_B2      // MK  pin 17
+
+#define GPIO_PIN_08 GpioAction::BUTTON_PRESS_L1      // 3P  pin 11
+#define GPIO_PIN_09 GpioAction::BUTTON_PRESS_L2      // 3K  pin 12
+
+#define GPIO_PIN_04 GpioAction::BUTTON_PRESS_R3      // R3  pin 6
+#define GPIO_PIN_12 GpioAction::BUTTON_PRESS_R2      // HK  pin 16
+#define GPIO_PIN_26 GpioAction::BUTTON_PRESS_L3      // L3  pin 31
+
+#define GPIO_PIN_01 GpioAction::BUTTON_PRESS_S2      // START   pin 2
+#define GPIO_PIN_02 GpioAction::BUTTON_PRESS_S1      // SELECT  pin 4
+
+#define GPIO_PIN_16 GpioAction::BUTTON_PRESS_A1      // EXT1  pin 21
+#define GPIO_PIN_17 GpioAction::BUTTON_PRESS_A2      // EXT2  pin 22
+
+#define KEY_DPAD_UP     HID_KEY_ARROW_UP
+#define KEY_DPAD_DOWN   HID_KEY_ARROW_DOWN
+#define KEY_DPAD_RIGHT  HID_KEY_ARROW_RIGHT
+#define KEY_DPAD_LEFT   HID_KEY_ARROW_LEFT
+#define KEY_BUTTON_B1   HID_KEY_SHIFT_LEFT
+#define KEY_BUTTON_B2   HID_KEY_Z
+#define KEY_BUTTON_R2   HID_KEY_X
+#define KEY_BUTTON_L2   HID_KEY_V
+#define KEY_BUTTON_B3   HID_KEY_CONTROL_LEFT
+#define KEY_BUTTON_B4   HID_KEY_ALT_LEFT
+#define KEY_BUTTON_R1   HID_KEY_SPACE
+#define KEY_BUTTON_L1   HID_KEY_C
+#define KEY_BUTTON_S1   HID_KEY_5
+#define KEY_BUTTON_S2   HID_KEY_1
+#define KEY_BUTTON_L3   HID_KEY_EQUAL
+#define KEY_BUTTON_R3   HID_KEY_MINUS
+#define KEY_BUTTON_A1   HID_KEY_9
+#define KEY_BUTTON_A2   HID_KEY_F2
 #define KEY_BUTTON_FN   -1
 
-#define GPIO_PIN_16 GpioAction::BUTTON_PRESS_A1
-#define GPIO_PIN_17 GpioAction::BUTTON_PRESS_A2
-
 #define TURBO_ENABLED 0
+
 #define BOARD_LEDS_PIN 25
 #define LED_BRIGHTNESS_MAXIMUM 100
 #define LED_FORMAT LED_FORMAT_GRB
